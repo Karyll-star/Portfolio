@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap');
 
+:root {
+    --primary-color: #F3C03D; /* 光效主色，按需替换 */
+    --accent-color: #c81623;
+    --bg-color: rgba(255, 253, 251, 1);
+    --text-color: #666;
+    --container-width: 1200px;
+}
+
 .w {
     width: 1200px;
     margin: 0 auto;
