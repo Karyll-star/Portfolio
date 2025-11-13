@@ -245,26 +245,29 @@ nav {
 }
 
 .firstScreen .content .fsleft .link a:nth-child(2) {
-    background-image: url(../image/jike.svg);
+    background-image: url(../image/blog.svg);
+     background-repeat: no-repeat;  /* 禁止平铺重复 */
+    background-position: center;   /* 将图片放在容器中央 */
+    background-size: contain;      /* 缩放图片以完全容纳在容器内，保持宽高比 */
 }
 
 .firstScreen .content .fsleft .link a:nth-child(3) {
-    background-image: url(../image/figma.svg);
-}
-
-.firstScreen .content .fsleft .link a:nth-child(4) {
     background-image: url(../image/zhanku.svg);
 }
 
-.firstScreen .content .fsleft .link a:nth-child(5) {
+.firstScreen .content .fsleft .link a:nth-child(4) {
     background-image: url(../image/weibo.svg);
+}
+
+.firstScreen .content .fsleft .link a:nth-child(5) {
+    background-image: url(../image/gongzhonghao.svg);
 }
 
 .firstScreen .content .fsleft .link a:nth-child(6) {
     background-image: url(../image/gongzhonghao.svg);
 }
 
-.firstScreen .content .fsleft .link a:nth-child(6) .subcode {
+.firstScreen .content .fsleft .link a:nth-child(5) .subcode {
     position: absolute;
     left: -96px;
     bottom: 60px;
@@ -278,25 +281,25 @@ nav {
     transition: all 0.3s;
 }
 
-.firstScreen .content .fsleft .link a:nth-child(6):hover .subcode {
+.firstScreen .content .fsleft .link a:nth-child(5):hover .subcode {
     transform: scale(1);
     /* display: block; */
 }
 
-.firstScreen .content .fsleft .link a:nth-child(7) {
-    background-image: url(../image/unsplash.svg);
+.firstScreen .content .fsleft .link a:nth-child(6) {
+    background-image: url(../image/500px.svg);
 }
 
-.firstScreen .content .fsleft .link a:nth-child(8) {
+.firstScreen .content .fsleft .link a:nth-child(7) {
     background-image: url(../image/weixin.svg);
 }
 
-.firstScreen .content .fsleft .link a:nth-child(8) .mecode {
+.firstScreen .content .fsleft .link a:nth-child(7) .mecode {
     position: absolute;
     left: -96px;
     bottom: 60px;
     background-size: contain;
-    background-image: url(../image/mecode.png);
+    background-image: url(https://img.karyll.xn--6qq986b3xl/file/1762874899926_微信二维码.jpg);
     width: 238px;
     height: 344px;
     /* display: none; */
@@ -305,16 +308,16 @@ nav {
     transition: all 0.3s;
 }
 
-.firstScreen .content .fsleft .link a:nth-child(8):hover .mecode {
+.firstScreen .content .fsleft .link a:nth-child(7):hover .mecode {
     transform: scale(1);
     /* display: block; */
 }
 
-.firstScreen .content .fsleft .link a:nth-child(9) {
+.firstScreen .content .fsleft .link a:nth-child(8) {
     background-image: url(../image/youxiang.svg);
 }
 
-.firstScreen .content .fsleft .link a:nth-child(9) .email {
+.firstScreen .content .fsleft .link a:nth-child(8) .email {
     position: absolute;
     left: -87px;
     bottom: 60px;
@@ -333,7 +336,7 @@ nav {
     font-weight: 700;
 }
 
-.firstScreen .content .fsleft .link a:nth-child(9):hover .email {
+.firstScreen .content .fsleft .link a:nth-child(8):hover .email {
     transform: scale(1);
     /* display: block; */
 }
@@ -1025,26 +1028,26 @@ div[class$=chip] {
 }
 
 .contact .link a:nth-child(2) {
-    background-image: url(../image/jike0.svg);
-}
-
-.contact .link a:nth-child(3) {
     background-image: url(../image/figma0.svg);
 }
 
-.contact .link a:nth-child(4) {
+.contact .link a:nth-child(3) {
     background-image: url(../image/zhanku0.svg);
 }
 
-.contact .link a:nth-child(5) {
+.contact .link a:nth-child(4) {
     background-image: url(../image/weibo0.svg);
+}
+
+.contact .link a:nth-child(5) {
+    background-image: url(../image/gongzhonghao0.svg);
 }
 
 .contact .link a:nth-child(6) {
     background-image: url(../image/gongzhonghao0.svg);
 }
 
-.contact .link a:nth-child(6) .subcode {
+.contact .link a:nth-child(5) .subcode {
     position: absolute;
     left: -96px;
     bottom: 60px;
@@ -1058,20 +1061,20 @@ div[class$=chip] {
     transition: all 0.3s;
 }
 
-.contact .link a:nth-child(6):hover .subcode {
+.contact .link a:nth-child(5):hover .subcode {
     transform: scale(1);
     /* display: block; */
 }
 
-.contact .link a:nth-child(7) {
+.contact .link a:nth-child(6) {
     background-image: url(../image/unsplash0.svg);
 }
 
-.contact .link a:nth-child(8) {
+.contact .link a:nth-child(7) {
     background-image: url(../image/weixin0.svg);
 }
 
-.contact .link a:nth-child(8) .mecode {
+.contact .link a:nth-child(7) .mecode {
     position: absolute;
     left: -96px;
     bottom: 60px;
@@ -1085,16 +1088,16 @@ div[class$=chip] {
     transition: all 0.3s;
 }
 
-.contact .link a:nth-child(8):hover .mecode {
+.contact .link a:nth-child(7):hover .mecode {
     transform: scale(1);
     /* display: block; */
 }
 
-.contact .link a:nth-child(9) {
+.contact .link a:nth-child(8) {
     background-image: url(../image/youxiang0.svg);
 }
 
-.contact .link a:nth-child(9) .email {
+.contact .link a:nth-child(8) .email {
     position: absolute;
     left: -87px;
     bottom: 60px;
@@ -1113,7 +1116,7 @@ div[class$=chip] {
     font-weight: 700;
 }
 
-.contact .link a:nth-child(9):hover .email {
+.contact .link a:nth-child(8):hover .email {
     transform: scale(1);
     /* display: block; */
 }
