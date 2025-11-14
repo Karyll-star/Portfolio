@@ -272,7 +272,8 @@ nav {
     left: -96px;
     bottom: 60px;
     background-size: contain;
-    background-image: url(https://img.karyll.xn--6qq986b3xl/file/1762874899926_微信二维码.jpg);
+    background-image: url(https://img.karyll.xn--6qq986b3xl/file/1763111621306_微信二维码-圆角.png);
+    background-repeat: no-repeat;  /* 禁止平铺重复 */
     width: 238px;
     height: 344px;
     /* display: none; */
@@ -316,6 +317,8 @@ nav {
 
 /* 右侧的动画 */
 
+/* 右侧 3D 展示效果容器样式 */
+/* 您可以在这里调整 3D 模型容器的大小和位置 */
 .fsright {
     position: absolute;
     width: 600px;
@@ -704,7 +707,7 @@ div[class$=chip] {
     left: 36px;
     top: 0px;
 
-    background: url(../image/brain.png);
+    background: url(../image/rabbit0.svg);
     box-shadow: 0px 439px 326px rgba(4, 2, 116, 0.0369582), 0px 218.299px 129.088px rgba(4, 2, 116, 0.0521688), 0px 116.088px 64.1276px rgba(4, 2, 116, 0.0617867), 0px 60.3908px 33.628px rgba(4, 2, 116, 0.071093), 0px 28.618px 16.9656px rgba(4, 2, 116, 0.0843155), 0px 10.9767px 7.50318px rgba(4, 2, 116, 0.1083), 0px 2.40999px 2.34777px rgba(4, 2, 116, 0.17);
     border-radius: 0px 0px 9px 9px;
 }
@@ -1001,7 +1004,7 @@ div[class$=chip] {
 }
 
 .contact .link a:nth-child(2) {
-    background-image: url(../image/blog.svg);
+    background-image: url(../image/blog0.svg);
      background-repeat: no-repeat;  /* 禁止平铺重复 */
     background-position: center;   /* 将图片放在容器中央 */
     background-size: contain;      /* 缩放图片以完全容纳在容器内，保持宽高比 */
@@ -1012,11 +1015,14 @@ div[class$=chip] {
 }
 
 .contact .link a:nth-child(4) {
-    background-image: url(../image/weibo0.svg);
+    background-image: url(../image/github.svg);     
+    background-repeat: no-repeat;  /* 禁止平铺重复 */
+    background-position: center;   /* 将图片放在容器中央 */
+    background-size:60%;      /* 缩放图片以完全容纳在容器内，保持宽高比 */
 }
 
 .contact .link a:nth-child(5) {
-    background-image: url(../image/500px.svg);
+    background-image: url(../image/500px0.svg);
 }
 
 .contact .link a:nth-child(6) {
@@ -1028,7 +1034,8 @@ div[class$=chip] {
     left: -96px;
     bottom: 60px;
     background-size: contain;
-    background-image: url(../image/mecode.png);
+    background-image: url(https://img.karyll.xn--6qq986b3xl/file/1763111621306_微信二维码-圆角.png);
+    background-repeat: no-repeat;  /* 禁止平铺重复 */
     width: 238px;
     height: 344px;
     /* display: none; */
