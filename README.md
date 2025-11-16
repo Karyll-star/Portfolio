@@ -1,8 +1,8 @@
-# me2021 - karyll 个人作品集
+# karyll 个人作品集
 
 ## 🚀 项目简介
 
-**me2021** 是一个由 karyll 定制开发的个人作品集展示网站。它基于 HTML5、CSS3 和原生 JavaScript 构建，旨在以现代、响应式的设计风格，展示 UI/UX 设计作品、分享知识、记录生活点滴。
+基于 HTML5、CSS3 和原生 JavaScript 构建，旨在以现代、响应式的设计风格，展示 UI/UX 设计作品、分享知识、记录生活点滴。
 
 ## ✨ 项目特色
 
@@ -110,16 +110,6 @@ me2021-main/
 
 #### 📞 联系我区域 (Contact Section)
 -   社交平台链接集合，与首屏类似，部分链接悬停时显示二维码或邮箱地址。
-
-## ⚙️ 如何运行
-
-1.  **克隆仓库**：
-    ```bash
-    git clone https://github.com/your-username/me2021-main.git
-    cd me2021-main
-    ```
-2.  **打开 `index.html`**：
-    直接在浏览器中打开 `index.html` 文件即可预览网站。
 
 ## ✉️ 联系方式
 
