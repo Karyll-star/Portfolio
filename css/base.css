@@ -64,9 +64,9 @@ body {
     clear: both;
     display: block;
     content: ".";
-    height: 0
+    height: 0;
 }
 
 .clearfix {
-    *zoom: 1
+    *zoom: 1;
 }
