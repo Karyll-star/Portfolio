@@ -1,0 +1,25 @@
+{
+  "name": "me2021-main",
+  "version": "1.0.0",
+  "description": "基于 HTML5、CSS3 和原生 JavaScript 构建，旨在以现代、响应式的设计风格，展示 UI/UX 设计作品、分享知识、记录生活点滴。",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server . -o",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Karyll-star/Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Karyll-star/Portfolio/issues"
+  },
+  "homepage": "https://github.com/Karyll-star/Portfolio#readme",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
