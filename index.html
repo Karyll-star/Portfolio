@@ -21,6 +21,17 @@
 
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/index.css">
+    <style>
+        /* 全程隐藏滚动条 */
+        ::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
+        }
+        body {
+            -ms-overflow-style: none;  /* IE, Edge */
+            scrollbar-width: none;  /* Firefox */
+            overflow: hidden; /* 初始禁止滚动 */
+        }
+    </style>
     <script src="js/effect.js"></script>
    
 
@@ -45,8 +56,9 @@
             container.style.opacity = '0';
             setTimeout(function() {
                 container.style.display = 'none';
+                document.body.style.overflow = 'auto'; // 恢复滚动
             }, 500); // 等待淡出动画结束
-        }, 3000);
+        }, 2000);
     </script>
 
      <!-- Start of Howxm client code snippet -->
