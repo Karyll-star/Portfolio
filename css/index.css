@@ -43,7 +43,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 720px;
+    height: 1200px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
@@ -1558,7 +1558,7 @@ div[class$=chip] {
     /* 小屏幕背景优化 */
     .bglight {
         height: auto;
-        min-height: 400px;
+        min-height: 600px;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center top;
@@ -1674,6 +1674,6 @@ div[class$=chip] {
 
     /* 极小屏幕背景优化 */
     .bglight {
-        min-height: 300px;
+        min-height: 450px;
     }
 }
