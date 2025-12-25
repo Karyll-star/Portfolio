@@ -1076,3 +1076,588 @@ div[class$=chip] {
     transform: scale(1);
     /* display: block; */
 }
+
+/* ===== 响应式设计：流式布局 + 卡片化 ===== */
+
+/* 平板及以上桌面（> 1024px）：保持原有布局不变 */
+/* 无需修改，原始 CSS 生效 */
+
+/* 平板（768px - 1024px）：轻微调整 */
+@media (max-width: 1024px) {
+    .w {
+        width: calc(100% - 40px);
+        max-width: 1200px;
+        padding: 0;
+        margin: 20px auto;
+    }
+
+    .firstScreen {
+        height: auto;
+    }
+
+    .firstScreen .content {
+        height: auto;
+        position: relative;
+        padding: 0 20px;
+        margin: 0 auto;
+    }
+
+    .firstScreen .content .fsleft {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        margin: 40px 0;
+        padding: 0;
+    }
+
+    .firstScreen .content .fsleft h1 {
+        font-size: 72px;
+        line-height: 86px;
+    }
+
+    .firstScreen .content .fsleft h3 {
+        font-size: 52px;
+        line-height: 62px;
+    }
+
+    .firstScreen .content .fsright {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        width: 100%;
+        height: 350px;
+        margin-top: 30px;
+    }
+
+    .portfolio {
+        padding: 0 20px;
+    }
+
+    .portfolio .desc {
+        float: none;
+        margin-left: 0;
+        margin-top: 16px;
+    }
+
+    .portfolio .desc p {
+        width: 100%;
+    }
+
+    .chips .fl,
+    .chips .fr {
+        width: 48%;
+        display: inline-block;
+        vertical-align: top;
+    }
+}
+
+/* 手机竖屏（480px - 767px）：完全卡片化 */
+@media (max-width: 767px) {
+    html, body {
+        overflow-x: auto;
+        max-width: 100%;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .w {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0 16px;
+    }
+
+    /* 首屏 */
+    .firstScreen {
+        height: auto;
+        padding: 0;
+    }
+
+    .firstScreen .content {
+        position: relative;
+        height: auto;
+        padding: 16px 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    nav {
+        height: auto;
+        padding: 16px;
+        margin-bottom: 0;
+    }
+
+    .logo {
+        float: none;
+        display: inline-block;
+        margin-top: 0;
+        margin-right: 12px;
+    }
+
+    .download {
+        float: none;
+        display: inline-block;
+        width: auto;
+        margin-top: 0;
+        padding: 8px 16px;
+    }
+
+    .firstScreen .content .fsleft {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        margin: 20px 16px 0;
+        padding: 0;
+        width: calc(100% - 32px);
+    }
+
+    .firstScreen .content .fsleft h3 {
+        font-size: 32px;
+        line-height: 38px;
+    }
+
+    .firstScreen .content .fsleft h1 {
+        font-size: 44px;
+        line-height: 52px;
+    }
+
+    .firstScreen .content .fsleft h2 {
+        font-size: 12px;
+        margin-top: 16px;
+    }
+
+    .firstScreen .content .fsleft p {
+        font-size: 13px;
+        line-height: 1.6;
+        margin-top: 12px;
+    }
+
+    .firstScreen .content .fsleft .line {
+        height: 3px;
+        margin: 12px 0 0;
+    }
+
+    .firstScreen .content .fsleft .link {
+        height: auto;
+        margin-top: 16px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .firstScreen .content .fsleft .link a {
+        position: relative;
+        display: block;
+        float: none;
+        margin-right: 0;
+        width: 40px;
+        height: 40px;
+    }
+
+    .fsright {
+        position: relative;
+        width: calc(100% - 32px);
+        height: 280px;
+        right: auto;
+        bottom: auto;
+        margin: 20px 16px;
+    }
+
+    .decoline {
+        height: 3px;
+        margin: 0;
+        width: 100%;
+    }
+
+    /* 作品集卡片化 */
+    .portfolio {
+        padding: 0 16px;
+        margin: 0;
+    }
+
+    .portfolio h1 {
+        font-size: 24px;
+        margin-top: 30px;
+    }
+
+    .portfolio p {
+        font-size: 13px;
+    }
+
+    .portfoliocard {
+        position: relative;
+        height: auto;
+        padding: 16px;
+        margin: 16px 0;
+        background-color: rgba(255, 255, 255, 0.4);
+        border: 1px solid #FFFFFF;
+        border-radius: 12px;
+        display: block;
+    }
+
+    .portfolio .desc {
+        float: none;
+        margin-left: 0;
+        margin-top: 16px;
+        width: 100%;
+    }
+
+    .portfolio .desc span {
+        font-size: 11px;
+    }
+
+    .portfolio .desc h2 {
+        font-size: 16px;
+        margin-top: 8px;
+    }
+
+    .portfolio .desc p {
+        width: 100%;
+        font-size: 12px;
+        margin-top: 8px;
+    }
+
+    .portfolio .desc a {
+        position: relative;
+        bottom: auto;
+        font-size: 14px;
+        padding: 6px 12px;
+        margin-top: 12px;
+    }
+
+    .portfolio-cover {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    /* 薯条卡片化 */
+    .chips {
+        padding: 0 16px;
+    }
+
+    .chips h1 {
+        font-size: 24px;
+        margin-top: 30px;
+    }
+
+    .chips p {
+        font-size: 13px;
+    }
+
+    div[class$=chip] {
+        height: auto;
+        margin: 16px 0;
+    }
+
+    .chips .fl,
+    .chips .fr {
+        float: none;
+        width: 100%;
+        height: 200px;
+        margin-bottom: 16px;
+    }
+
+    .secchip h4 {
+        top: 50%;
+        left: 50%;
+        margin-left: -50%;
+        margin-top: -18px;
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    .secchip p {
+        top: auto;
+        bottom: 16px;
+        left: 12px;
+        font-size: 11px;
+    }
+
+    .thrdimg {
+        position: static;
+        width: 100%;
+        height: 250px;
+        animation: none;
+        margin-top: 12px;
+    }
+
+    .thrdimg:hover {
+        animation: none;
+    }
+
+    .fl .snow {
+        position: static;
+        width: 100%;
+        height: 150px;
+        transform: none;
+        outline: none;
+        margin-top: 12px;
+    }
+
+    .thichip .fl:hover .snow {
+        top: auto;
+        right: auto;
+        height: 150px;
+        width: 100%;
+        transform: none;
+        outline: none;
+        border-radius: 10px;
+    }
+
+    /* Brain 区块卡片化 */
+    .brain {
+        margin-top: 60px;
+        height: auto;
+        padding: 30px 16px;
+    }
+
+    .brainimg {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        left: auto;
+        top: auto;
+        margin-bottom: 20px;
+        box-shadow: none;
+    }
+
+    .brain .desc h1 {
+        position: relative;
+        width: 100%;
+        height: auto;
+        left: auto;
+        top: auto;
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .brain .desc p {
+        position: relative;
+        width: 100%;
+        height: auto;
+        left: auto;
+        top: auto;
+        margin-top: 16px;
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .brain .desc a {
+        position: relative;
+        left: auto;
+        top: auto;
+        margin-top: 16px;
+        width: auto;
+    }
+
+    /* 影像集卡片化 */
+    .album {
+        height: auto;
+        padding: 30px 16px;
+    }
+
+    .album .w {
+        position: relative;
+        height: auto;
+    }
+
+    .album img {
+        position: relative;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+        margin: 12px 0;
+        width: 100%;
+        height: auto;
+        margin-left: 0 !important;
+    }
+
+    .album .desc {
+        position: relative;
+        width: 100%;
+        height: auto;
+        left: auto;
+        top: auto;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.62);
+        padding: 20px 16px;
+        margin: 20px 0;
+    }
+
+    .album .desc h1 {
+        position: relative;
+        width: 100%;
+        left: auto;
+        top: auto;
+        margin-bottom: 12px;
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .album .desc p {
+        position: relative;
+        width: 100%;
+        left: auto;
+        top: auto;
+        margin-bottom: 16px;
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    .album .desc a {
+        position: relative;
+        left: auto;
+        bottom: auto;
+    }
+
+    /* 关于我和联系方式 */
+    .about,
+    .contact {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        margin: 60px auto;
+        padding: 0 16px;
+        gap: 0;
+    }
+
+    .about h1,
+    .contact h1 {
+        width: 100%;
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 20px;
+    }
+
+    .about p {
+        width: 100%;
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .contact .link {
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 16px;
+    }
+
+    .contact .link a {
+        float: none;
+        margin-right: 0;
+    }
+}
+
+/* 极小屏幕（< 480px）：进一步优化 */
+@media (max-width: 479px) {
+    .w {
+        padding: 0 12px;
+    }
+
+    .firstScreen .content .fsleft {
+        margin: 16px 12px 0;
+        width: calc(100% - 24px);
+    }
+
+    .firstScreen .content .fsleft h1 {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    .firstScreen .content .fsleft h3 {
+        font-size: 28px;
+        line-height: 34px;
+    }
+
+    .fsright {
+        width: calc(100% - 24px);
+        height: 240px;
+        margin: 16px 12px;
+    }
+
+    .portfolio {
+        padding: 0 12px;
+    }
+
+    .portfolio h1 {
+        font-size: 20px;
+    }
+
+    .portfolio p {
+        font-size: 12px;
+    }
+
+    .portfoliocard {
+        padding: 12px;
+        margin: 12px 0;
+    }
+
+    .portfolio .desc h2 {
+        font-size: 14px;
+    }
+
+    .portfolio .desc p {
+        font-size: 11px;
+    }
+
+    .chips {
+        padding: 0 12px;
+    }
+
+    .chips .fl,
+    .chips .fr {
+        height: 160px;
+    }
+
+    .brain {
+        padding: 20px 12px;
+    }
+
+    .brainimg {
+        height: 240px;
+    }
+
+    .brain .desc h1 {
+        font-size: 20px;
+    }
+
+    .brain .desc p {
+        font-size: 12px;
+    }
+
+    .album {
+        padding: 20px 12px;
+    }
+
+    .album .desc {
+        padding: 16px 12px;
+    }
+
+    .album .desc h1 {
+        font-size: 18px;
+    }
+
+    .album .desc p {
+        font-size: 11px;
+    }
+
+    .about,
+    .contact {
+        padding: 0 12px;
+    }
+
+    .about h1,
+    .contact h1 {
+        font-size: 20px;
+    }
+
+    .about p {
+        font-size: 12px;
+    }
+}
