@@ -1076,3 +1076,331 @@ div[class$=chip] {
     transform: scale(1);
     /* display: block; */
 }
+
+/* ========================================= */
+/* Mobile Responsive Design (Max Width 768px) */
+/* ========================================= */
+
+@media screen and (max-width: 768px) {
+    /* --- Global Layout --- */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
+    }
+    .w {
+        width: 100% !important;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    
+    /* 彻底隐藏可能导致溢出的固定宽度光效 */
+    #light {
+        display: none !important;
+    }
+
+    /* 修复全局图片和视频溢出 */
+    img, video {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* --- Navigation --- */
+    nav {
+        height: auto;
+        padding: 15px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .logo {
+        float: none;
+        margin-top: 0;
+        flex-shrink: 0; /* 防止 logo 被压缩 */
+    }
+    
+    /* 彻底解决下载简历按钮可能导致的溢出 */
+    nav a[download] {
+        display: block;
+        max-width: 50%; /* 限制宽度 */
+    }
+    
+    .download {
+        float: none;
+        margin-top: 0;
+        width: 100% !important; /* 填满 a 标签 */
+        max-width: 120px; /* 进一步限制按钮宽度 */
+        padding: 0 10px;
+        font-size: 13px;
+        height: 34px;
+        line-height: 34px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; /* 文字过长时显示省略号 */
+    }
+
+    /* --- First Screen --- */
+    .firstScreen {
+        height: auto;
+        min-height: 100vh;
+        padding-bottom: 50px;
+    }
+    
+    .bglight {
+        height: 100%;
+        min-height: 100vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center top;
+        position: absolute;
+        top: 0;
+        left: 0; 
+    }
+    
+    .lightwhere {
+        overflow: hidden; 
+    }
+
+    .firstScreen .content {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+    }
+
+    .fsright {
+        display: none !important;
+    }
+
+    .firstScreen .content .fsleft {
+        position: static;
+        width: 100%;
+        margin-top: 20px;
+        text-align: left;
+    }
+
+    .firstScreen .content .fsleft h3 {
+        font-size: 28px;
+        line-height: 1.2;
+        margin-bottom: 8px;
+    }
+    
+    .firstScreen .content .fsleft h1 {
+        font-size: 42px;
+        line-height: 1.1;
+        word-wrap: break-word;
+    }
+
+    .firstScreen .content .fsleft .line {
+        max-width: 120px;
+        margin: 15px 0;
+    }
+    
+    .firstScreen .content .fsleft h2 {
+        font-size: 18px;
+        line-height: 1.4;
+        margin-top: 10px;
+    }
+
+    .firstScreen .content .fsleft p {
+        font-size: 15px;
+        line-height: 1.6;
+        margin-top: 15px;
+    }
+
+    .firstScreen .content .fsleft .link {
+        margin-top: 25px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    
+    /* 禁用移动端悬停弹出层，防止溢出 */
+    .mecode, .email {
+        display: none !important;
+    }
+
+    /* --- Portfolio --- */
+    .portfolio {
+        padding: 0 20px;
+    }
+    
+    .portfoliocard {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .portfolio .desc {
+        float: none;
+        margin-left: 0;
+        width: 100%;
+        position: relative;
+    }
+
+    .portfolio .desc h2 {
+        font-size: 18px;
+    }
+
+    .portfolio .desc p {
+        width: 100%;
+        font-size: 13px;
+        margin-bottom: 45px;
+    }
+
+    .portfolio .desc a {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+    /* --- Chips (Fries) --- */
+    .chips {
+        padding: 0 20px;
+    }
+    
+    div[class$=chip] {
+        height: auto;
+        gap: 15px;
+    }
+
+    .chips .fl, .chips .fr {
+        width: 100%;
+        min-height: 200px;
+    }
+
+    .secchip .fl {
+        padding: 15px;
+    }
+    
+    .secchip h4 {
+        font-size: 22px;
+    }
+    
+    .thrdimg {
+        display: none;
+    }
+
+    /* --- Second Brain (Brain) --- */
+    .brain {
+        padding: 40px 20px;
+    }
+
+    .brainimg {
+        width: 70%;
+        max-width: 200px;
+    }
+
+    .brain .desc h1 {
+        font-size: 22px;
+    }
+
+    /* --- Album --- */
+    .album {
+        height: auto;
+        padding: 40px 20px;
+        background-color: #110E0F;
+    }
+
+    .album .w {
+        height: auto;
+        position: static; /* 去除宽屏的 relative */
+    }
+
+    /* 隐藏散乱的装饰图片 */
+    .album img {
+        display: none !important;
+    }
+
+    /* 重构描述区域为流式卡片 */
+    .album .desc {
+        position: static; /* 覆盖 absolute */
+        width: 100% !important; /* 覆盖 634px */
+        height: auto !important; /* 覆盖 316px */
+        margin: 0;
+        padding: 25px;
+        box-sizing: border-box;
+        
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 12px;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .album .desc h1 {
+        position: static; /* 覆盖 absolute */
+        width: 100%;
+        height: auto;
+        font-size: 24px;
+        line-height: 1.4;
+        margin: 0 0 15px 0;
+        text-align: left;
+    }
+
+    .album .desc p {
+        position: static; /* 覆盖 absolute */
+        width: 100%;
+        height: auto;
+        font-size: 14px;
+        line-height: 1.8;
+        margin: 0 0 25px 0;
+        text-align: left;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .album .desc a {
+        position: static; /* 覆盖 absolute */
+        display: inline-block;
+        margin: 0;
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    /* --- About & Contact --- */
+    .about, .contact {
+        width: 100% !important; /* 强制覆盖宽屏的固定宽度 */
+        flex-direction: column;
+        gap: 15px;
+        padding: 0 20px;
+        margin: 30px auto;
+        height: auto;
+        box-sizing: border-box; /* 防止 padding 撑大 */
+    }
+    
+    .about h1, .contact h1 {
+        width: 100%;
+        text-align: left;
+        font-size: 22px;
+        height: auto;
+    }
+    
+    .about p {
+        width: 100% !important; /* 强制覆盖宽屏的固定宽度 */
+        height: auto;
+        font-size: 14px;
+        line-height: 1.6;
+        word-wrap: break-word; /* 防止长文本溢出 */
+    }
+    
+    .contact .link {
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    
+    .contact .link a {
+        float: none;
+        margin-right: 0;
+    }
+}
