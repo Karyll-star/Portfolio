@@ -1087,11 +1087,19 @@ div[class$=chip] {
         overflow-x: hidden;
         width: 100%;
         position: relative;
+        margin: 0;
+        padding: 0;
     }
-    .w {
-        width: 100% !important;
-        padding: 0 20px;
+    
+    /* 通用容器修复 */
+    .w, .portfolio, .chips, .brain, .album, .about, .contact, .firstScreen {
         box-sizing: border-box;
+        overflow-x: hidden; /* 强制裁剪内部溢出 */
+        width: 100% !important;
+    }
+    
+    .w {
+        padding: 0 20px;
     }
     
     /* 彻底隐藏可能导致溢出的固定宽度光效 */
@@ -1108,7 +1116,7 @@ div[class$=chip] {
     /* --- Navigation --- */
     nav {
         height: auto;
-        padding: 15px 0;
+        padding: 15px 20px; /* 增加内边距 */
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -1119,27 +1127,27 @@ div[class$=chip] {
     .logo {
         float: none;
         margin-top: 0;
-        flex-shrink: 0; /* 防止 logo 被压缩 */
+        flex-shrink: 0;
     }
     
-    /* 彻底解决下载简历按钮可能导致的溢出 */
     nav a[download] {
         display: block;
-        max-width: 50%; /* 限制宽度 */
+        max-width: 45%;
     }
     
     .download {
         float: none;
         margin-top: 0;
-        width: 100% !important; /* 填满 a 标签 */
-        max-width: 120px; /* 进一步限制按钮宽度 */
+        width: 100% !important;
+        max-width: 120px;
         padding: 0 10px;
         font-size: 13px;
         height: 34px;
         line-height: 34px;
         white-space: nowrap;
         overflow: hidden;
-        text-overflow: ellipsis; /* 文字过长时显示省略号 */
+        text-overflow: ellipsis;
+        box-sizing: border-box;
     }
 
     /* --- First Screen --- */
@@ -1218,7 +1226,6 @@ div[class$=chip] {
         gap: 12px;
     }
     
-    /* 禁用移动端悬停弹出层，防止溢出 */
     .mecode, .email {
         display: none !important;
     }
@@ -1226,6 +1233,7 @@ div[class$=chip] {
     /* --- Portfolio --- */
     .portfolio {
         padding: 0 20px;
+        margin-top: 30px;
     }
     
     .portfoliocard {
@@ -1263,92 +1271,175 @@ div[class$=chip] {
     /* --- Chips (Fries) --- */
     .chips {
         padding: 0 20px;
+        margin-top: 40px;
     }
     
     div[class$=chip] {
         height: auto;
-        gap: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 40px; /* 增加板块间距 */
     }
 
+    /* 强制所有薯条背景不重复 */
     .chips .fl, .chips .fr {
+        float: none;
         width: 100%;
-        min-height: 200px;
+        height: auto;
+        min-height: 250px;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-position: center !important;
     }
 
+    .secchip .fr video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+    
     .secchip .fl {
-        padding: 15px;
+        padding: 20px;
+        height: auto;
+        min-height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     
     .secchip h4 {
-        font-size: 22px;
+        position: static;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    
+    .secchip p {
+        position: static;
+        font-size: 14px;
+        margin-bottom: 0;
     }
     
     .thrdimg {
         display: none;
     }
+    
+    /* 第三排薯条特殊处理 */
+    .thichip .fl {
+        min-height: 200px;
+    }
+    
+    /* 强制雪人位置 */
+    .fl .snow {
+        width: 80% !important;
+        height: auto !important;
+        right: 10% !important;
+        top: 20% !important;
+        background-repeat: no-repeat !important;
+        background-size: contain !important;
+    }
 
     /* --- Second Brain (Brain) --- */
     .brain {
-        padding: 40px 20px;
+        height: auto;
+        margin-top: 40px;
+        padding: 60px 20px;
+        background-color: #7468FE; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .brain .w {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .brainimg {
+        position: static;
         width: 70%;
         max-width: 200px;
+        height: auto;
+        aspect-ratio: 335/582;
+        margin: 0 auto 30px;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        box-shadow: none !important;
     }
 
     .brain .desc h1 {
-        font-size: 22px;
+        position: static;
+        width: 100%;
+        height: auto;
+        font-size: 24px;
+        line-height: 1.4;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .brain .desc p {
+        position: static;
+        width: 100%;
+        height: auto;
+        font-size: 14px;
+        line-height: 1.6;
+        text-align: center;
+        padding: 0;
+        margin-bottom: 25px;
+    }
+
+    .brain .desc a {
+        position: static;
+        display: inline-block;
+        margin: 0 auto;
     }
 
     /* --- Album --- */
     .album {
         height: auto;
-        padding: 40px 20px;
+        padding: 60px 20px;
         background-color: #110E0F;
     }
 
     .album .w {
         height: auto;
-        position: static; /* 去除宽屏的 relative */
+        position: static;
     }
 
-    /* 隐藏散乱的装饰图片 */
     .album img {
         display: none !important;
     }
 
-    /* 重构描述区域为流式卡片 */
     .album .desc {
-        position: static; /* 覆盖 absolute */
-        width: 100% !important; /* 覆盖 634px */
-        height: auto !important; /* 覆盖 316px */
+        position: static;
+        width: 100% !important;
+        height: auto !important;
         margin: 0;
         padding: 25px;
         box-sizing: border-box;
-        
         background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(10px);
         border: 1px solid rgba(255, 255, 255, 0.2);
         border-radius: 12px;
-        
         display: flex;
         flex-direction: column;
         align-items: flex-start;
     }
 
     .album .desc h1 {
-        position: static; /* 覆盖 absolute */
+        position: static;
         width: 100%;
         height: auto;
         font-size: 24px;
-        line-height: 1.4;
         margin: 0 0 15px 0;
         text-align: left;
     }
 
     .album .desc p {
-        position: static; /* 覆盖 absolute */
+        position: static;
         width: 100%;
         height: auto;
         font-size: 14px;
@@ -1359,7 +1450,7 @@ div[class$=chip] {
     }
 
     .album .desc a {
-        position: static; /* 覆盖 absolute */
+        position: static;
         display: inline-block;
         margin: 0;
         padding: 8px 16px;
@@ -1368,13 +1459,13 @@ div[class$=chip] {
 
     /* --- About & Contact --- */
     .about, .contact {
-        width: 100% !important; /* 强制覆盖宽屏的固定宽度 */
+        width: 100% !important;
         flex-direction: column;
         gap: 15px;
         padding: 0 20px;
-        margin: 30px auto;
+        margin: 40px auto;
         height: auto;
-        box-sizing: border-box; /* 防止 padding 撑大 */
+        box-sizing: border-box;
     }
     
     .about h1, .contact h1 {
@@ -1385,11 +1476,11 @@ div[class$=chip] {
     }
     
     .about p {
-        width: 100% !important; /* 强制覆盖宽屏的固定宽度 */
+        width: 100% !important;
         height: auto;
         font-size: 14px;
         line-height: 1.6;
-        word-wrap: break-word; /* 防止长文本溢出 */
+        word-wrap: break-word;
     }
     
     .contact .link {
