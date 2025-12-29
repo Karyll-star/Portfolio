@@ -1,7 +1,7 @@
 {
-  "name": "me2021-main",
+  "name": "karyll-portfolio",
   "version": "1.0.0",
-  "description": "基于 HTML5、CSS3 和原生 JavaScript 构建，旨在以现代、响应式的设计风格，展示 UI/UX 设计作品、分享知识、记录生活点滴。",
+  "description": "基于 HTML5、CSS3 和原生 JavaScript 构建，旨在以现代、响应式的设计风格，展示 UI/UX 设计作品、分享知识。",
   "main": "index.js",
   "scripts": {
     "start": "http-server . -o",
